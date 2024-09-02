@@ -17,7 +17,7 @@ btns[1].style.borderRadius = '100%';
 - используется свойство cssText
 - значения записываются в виде совйств css 
 - для работы с несколькими элементами можно использовать циклы*/
-box.style.cssText = 'background-color: red; width: 300px';
+box.style.cssText = 'background-color: red; width: 600px';
 
 
 /* Создание новых элементов из JS скриптов:
@@ -45,3 +45,21 @@ document.body.append(div);
 hearts[0].before(div);
 circles[1].remove();
 hearts[0].replaceWith(circles[1]);
+
+
+/* Добавление текста или верстки в элемент 
+1 Метод innerHTML - добавляет html-структуру
+2 Метод textContent - работает только с текстом*/
+div.innerHTML = "<h3>Hello, world!</h3>";
+div.textContent = "Bye bye!";
+
+
+/* Добавление HTML перед или после определенных тегов, метод :
+ элемент_над_которым_производим_действие.insertAdjacentHTML('положение', 'HTML-тег');
+ - в качестве первого аргумента указывается местоположение:
+  - после элемент,
+  - перед элементом,
+  - в начало элемента,
+  - в конец элемента  */
+
+div.insertAdjacentHTML('afterbegin', '<h2>I am here!</h2>');
